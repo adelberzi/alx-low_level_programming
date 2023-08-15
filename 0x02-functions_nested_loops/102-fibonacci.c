@@ -8,27 +8,23 @@
  */
 int main(void)
 {
-int count;
-unsigned long fib1 = 0, fib2 = 1, sum;
+	int count;
+	unsigned long fib1 = 0, fib2 = 1, sum;
 
-for (count = 0; count < 50; count++)
-{
-if (count < 2)
-sum = count + 1;
-else
-{
-sum = fib1 + fib2;
-fib1 = fib2;
-fib2 = sum;
+	for (count = 0; count < 50; count++)
+	{
+		sum = fib1 + fib2;
+		printf("%lu", sum);
+
+		fib1 = fib2;
+		fib2 = sum;
+
+		if (count == 49)
+			printf("\n");
+		else
+			printf(", ");
+	}
+
+	return (0);
 }
 
-printf("%lu", sum);
-
-if (count != 49)
-printf(", ");
-}
-
-printf("\n");
-
-return 0;
-}
