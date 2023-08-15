@@ -1,3 +1,8 @@
+/*
+ * File: 101-natural.c
+ * Auth: vincent kip
+ */
+
 #include <stdio.h>
 
 /**
@@ -6,6 +11,7 @@
  *
  * Return: Always 0.
  */
+
 int main(void)
 {
 int i, sum = 0;
