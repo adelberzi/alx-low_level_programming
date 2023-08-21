@@ -1,9 +1,11 @@
 #include <stdio.h>
+#include "main.h"
 /**
  * rev_string - Reverses a string
  * @s: Input string
  * Return: String in reverse
  */
+
 void rev_string(char *s)
 {
 char rev = s[0];
@@ -21,7 +23,7 @@ s[counter] = rev;
 }
 int main()
 {
-char str[] = "Hello, World!"; 
+char str[] = "Hello, World!";
 printf("Original string: %s\n", str);
 rev_string(str);
 printf("Reversed string: %s\n", str);
