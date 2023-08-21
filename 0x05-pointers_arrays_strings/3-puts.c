@@ -6,10 +6,10 @@
  */
 void _puts(char *str)
 {
-char *ptr = str; // Create a pointer to iterate over the string
+char *ptr = str;
 while (*ptr != '\0')
 {
-_putchar(*ptr++); // Print the character and increment the pointer
+_putchar(*ptr++);
 }
 _putchar('\n');
 }
