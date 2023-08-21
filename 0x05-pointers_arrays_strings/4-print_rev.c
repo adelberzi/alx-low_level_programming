@@ -1,14 +1,22 @@
-#include <iostream>
+#include <stdio.h>
+#include <string.h>
 /**
- * print_rev - prints in reverse
+ * print_rev - imprime en reversa
  * @s: string
  * return: 0
  */
-int main() 
+void print_rev(char *s)
 {
-int num1 = 5;
-int num2 = 10;
-int sum = num1 + num2;
-std::cout << "The sum of " << num1 << " and " << num2 << " is: " << sum << std::endl;
+int length = strlen(s);
+for (int i = length - 1; i >= 0; i--)
+{
+printf("%c", s[i]);
+}
+printf("\n");
+}
+int main()
+{
+char str[] = "Hello, World!";
+print_rev(str);
 return 0;
 }
