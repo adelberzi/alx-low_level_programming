@@ -1,47 +1,47 @@
 #include "main.h"
 
 /**
- * myAtoi - converts a string to an integer
- * @str: string to be converted
+ * _atoi - converts a string to an integer
+ * @s: string to be converted
  *
  * Return: the int converted from the string
  */
-int myAtoi(char *str)
+int _atoi(char *s)
 {
-int index, sign, result, length, flag, digit;
+	int i, d, n, len, f, digit;
 
-index = 0;
-sign = 0;
-result = 0;
-length = 0;
-flag = 0;
-digit = 0;
+	i = 0;
+	d = 0;
+	n = 0;
+	len = 0;
+	f = 0;
+	digit = 0;
 
-while (str[length] != '\0')
-length++;
+	while (s[len] != '\0')
+		len++;
 
-while (index < length && flag == 0)
-{
-if (str[index] == '-')
-++sign;
+	while (i < len && f == 0)
+	{
+		if (s[i] == '-')
+			++d;
 
-if (str[index] >= '0' && str[index] <= '9')
-{
-digit = str[index] - '0';
-if (sign % 2)
-digit = -digit;
-result = result * 10 + digit;
-flag = 1;
-if (str[index + 1] < '0' || str[index + 1] > '9')
-break;
-flag = 0;
-}
-index++;
-}
+		if (s[i] >= '0' && s[i] <= '9')
+		{
+			digit = s[i] - '0';
+			if (d % 2)
+				digit = -digit;
+			n = n * 10 + digit;
+			f = 1;
+			if (s[i + 1] < '0' || s[i + 1] > '9')
+				break;
+			f = 0;
+		}
+		i++;
+	}
 
-if (flag == 0)
-return (0);
+	if (f == 0)
+		return (0);
 
-return (result);
+	return (n);
 }
 
