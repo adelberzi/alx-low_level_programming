@@ -7,7 +7,7 @@
  */
 void swap_int(int *a, int *b)
 {
-if (a != NULL && b != NULL && a != b) 
+if(a != NULL && b != NULL && a != b) 
 {
 *a = *a + *b;
 *b = *a - *b;
