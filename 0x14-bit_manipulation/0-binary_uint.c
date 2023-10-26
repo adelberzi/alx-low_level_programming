@@ -6,23 +6,23 @@
  *
  * Return: unsigned int with decimal value of binsry number, or 0 if error
  */
-unsigned int binary_to_uint(const char *x)
+unsigned int binary_to_uint(const char *b)
 {
-	int y;
+	int a;
 	unsigned int num;
 
 	num = 0;
-	if (!x)
+	if (!b)
 		return (0);
-	for (y = 0; x[y] != '\0'; y++)
+	for (a = 0; b[a] != '\0'; a++)
 	{
-		if (x[y] != '0' && x[y] != '1')
+		if (b[a] != '0' && b[a] != '1')
 			return (0);
 	}
-	for (y = 0; x[y] != '\0'; y++)
+	for (a = 0; b[a] != '\0'; a++)
 	{
 		num <<= 1;
-		if (x[y] == '1')
+		if (b[a] == '1')
 			num += 1;
 	}
 	return (num);
